@@ -40,7 +40,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-storefront": "^8.17.4",
-    "react-visibility-sensor": "^5.1.1"
+    "react-visibility-sensor": "^5.1.1",
+    "twilio": "^3.71.1"
   },
   "devDependencies": {
     "babel-plugin-transform-imports": "^2.0.0",

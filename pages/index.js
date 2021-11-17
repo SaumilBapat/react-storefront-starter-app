@@ -7,6 +7,7 @@ import LoadMask from 'react-storefront/LoadMask'
 import Head from 'next/head'
 import createLazyProps from 'react-storefront/props/createLazyProps'
 import fetchFromAPI from 'react-storefront/props/fetchFromAPI'
+import SMSForm from './SMSForm';
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -21,12 +22,15 @@ const useStyles = makeStyles(theme => ({
 export default function Index(lazyProps) {
   const classes = useStyles()
   const [state] = useLazyState(lazyProps)
+  console.log('Headings: ' + state.pageData.slots.heading);
+// Title: {state.pageData.title}
+// Description: {state.pageData.slots.heading}
 
   return (
     <>
       {state.loading ? null : (
         <Head>
-          <title>{state.pageData.title}</title>
+          <title>Owlibaba</title>
         </Head>
       )}
       <Container maxWidth="lg">
@@ -35,12 +39,13 @@ export default function Index(lazyProps) {
         ) : (
           <div className={classes.main}>
             <Typography variant="h3" component="h1" gutterBottom color="primary">
-              {state.pageData.slots.heading}
+            Welcome to Owlibaba!
             </Typography>
-            <CmsSlot>{state.pageData.slots.description}</CmsSlot>
+            <CmsSlot>Browse around to see our new product offerings!</CmsSlot>
           </div>
         )}
       </Container>
+      <SMSForm />
     </>
   )
 }
