@@ -106,8 +106,9 @@ class SMSForm extends Component {
     // Main Render Method
     render() {
         return (
-        
-        <form
+        <div>
+          <img src="https://www.nicepng.com/png/detail/578-5789201_white-owl-cliparts-cartoon-owl.png" alt="Owlibaba" width="600" height="300"/>
+          <form
             onSubmit={this.onSubmit}
             className={this.state.error ? 'error sms-form' : 'sms-form'}
           >
@@ -128,6 +129,8 @@ class SMSForm extends Component {
                 Send SMS Update
             </button>
           </form>
+        </div>
+        
         );
       }
 }
